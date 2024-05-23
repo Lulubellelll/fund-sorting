@@ -20,7 +20,7 @@ jobs:
       - name: Adding locale 
         run: |
             sudo locale-gen tr_TR.UTF-8
-            sudo locele-gen tr_TR
+            sudo locale-gen tr_TR
 
       - name: install python packages
         run: |

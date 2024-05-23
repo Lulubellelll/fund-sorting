@@ -54,7 +54,7 @@ funds = pd.DataFrame(columns=headers)
 # Writing data into DataFrame and sorting it
 funds_new = write_and_sort(rows=rows, funds=funds, headers=headers)
 
-logger.info("Fund Data Was Scraped")
+logger.info("Fund Data was Scraped")
 
 # Authenticating the service account
 gc = gspread.service_account_from_dict(credentials)
@@ -72,6 +72,7 @@ ws_tod = ws_yest.duplicate(new_sheet_name=today, insert_sheet_index=0)
 old_data = ws_yest.get_all_values()
 funds_old = pd.DataFrame(old_data[1:], columns=old_data[0])
 
+logger.info("Olf Funds Data was Scraped")
 
 # Add change column to the new funds and
 # compare with the old funds
@@ -85,4 +86,4 @@ headers = funds_new.astype('object').columns.tolist()
 ws_tod.update(range_name="A2", values=funds)
 ws_tod.update(range_name="A1", values=[headers])
 
-
+logger.info("Olf Funds Data was Pushed into Sheets")

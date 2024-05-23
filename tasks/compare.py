@@ -2,7 +2,7 @@ import pandas as pd
 
 def compare_index(funds_old, funds_new):
 
-    funds_new.insert(0, "change", {})
+    funds_new.insert(0, "PLACE", {})
 
     for index, fund in funds_new.iterrows():
 
@@ -12,7 +12,7 @@ def compare_index(funds_old, funds_new):
         old_index = funds_old.loc[funds_old["KOD"] == fund_code].index[0] + 1 
 
         diff = old_index - current_index
-        funds_new.at[index, "change"] = diff
+        funds_new.at[index, "PLACE"] = diff
     
 
-    return funds_new.astype({"change": int})
+    return funds_new.astype({"PLACE": int})

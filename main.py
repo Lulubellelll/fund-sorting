@@ -4,13 +4,13 @@ import gspread
 import logging
 import requests
 import pandas as pd 
-import tasks.env_var
 import logging.handlers
 from bs4 import BeautifulSoup
 from datetime import date, timedelta
 from tasks.sort import write_and_sort
 from tasks.compare import compare_index
 from tasks.credentials import credentials
+
 
 # Setting locale time for datetime
 locale.setlocale(locale.LC_TIME, "tr_TR")
@@ -33,6 +33,8 @@ logger.addHandler(logger_file_handler)
 # Scraping the data from web
 r = requests.get("https://www.yatirimnedir.com/fon-filtreleme")
 soup = BeautifulSoup(r.content, "lxml")
+
+print(r.status_code)
 
 # Getting the table 
 table = soup.find("div", attrs={"role": "table"})

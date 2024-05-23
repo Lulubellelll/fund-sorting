@@ -1,2 +1,11 @@
 2024-05-23 20:39:16,963 - tasks.credentials - INFO - Key not available!
 2024-05-23 20:44:41,976 - tasks.credentials - INFO - Key not available!
+2024-05-23 21:57:21,049 - tasks.credentials - INFO - Key not available!
+2024-05-23 22:03:47,685 - tasks.credentials - INFO - Key not available!
+2024-05-23 22:04:37,545 - tasks.credentials - INFO - Key not available!
+2024-05-23 22:09:20,180 - tasks.credentials - INFO - Key not available!
+2024-05-23 22:21:44,748 - tasks.credentials - INFO - Key not available!
+2024-05-23 22:33:58,254 - __main__ - INFO - Fund Data was Scraped
+2024-05-23 22:34:01,675 - __main__ - INFO - Olf Funds Data was Scraped
+2024-05-23 22:34:03,062 - __main__ - INFO - Olf Funds Data was Pushed into Sheets
+2024-05-23 22:35:09,144 - __main__ - INFO - Fund Data was Scraped

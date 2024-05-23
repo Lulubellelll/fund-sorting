@@ -34,8 +34,6 @@ logger.addHandler(logger_file_handler)
 r = requests.get("https://www.yatirimnedir.com/fon-filtreleme")
 soup = BeautifulSoup(r.content, "lxml")
 
-print(r.status_code)
-
 # Getting the table 
 table = soup.find("div", attrs={"role": "table"})
 rows = table.find_all("div", attrs={"role": "row"})[1:]

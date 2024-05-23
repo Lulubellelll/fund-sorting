@@ -19,7 +19,7 @@ logger.addHandler(logger_file_handler)
 
 
 try:
-    PRIVATE_KEY_ID = os.environ["PRIVATE_KEY_ID"]
+    PRIVATE_KEY_ID = str(os.environ["PRIVATE_KEY_ID"])
 except KeyError:
     PRIVATE_KEY_ID = "Key not available!"
     logger.info("Key not available!")

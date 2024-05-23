@@ -4,6 +4,7 @@ import gspread
 import logging
 import requests
 import pandas as pd 
+import tasks.env_var
 import logging.handlers
 from bs4 import BeautifulSoup
 from datetime import date, timedelta

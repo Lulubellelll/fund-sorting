@@ -5,11 +5,12 @@ import logging
 import requests
 import pandas as pd 
 import logging.handlers
+from datetime import date
 from bs4 import BeautifulSoup
-from datetime import date, timedelta
 from tasks.sort import write_and_sort
 from tasks.compare import compare_index
 from tasks.credentials import credentials
+from tasks.dayPick import get_workdoy_yesterday
 
 
 # Setting locale time for datetime
@@ -63,7 +64,7 @@ sh = gc.open("Aylık Fon Getiri")
 
 # Definign today and yesterday
 today = date.today().strftime("%d %B %Y")
-yesterday = (date.today() - timedelta(days = 1)).strftime("%d %B %Y")
+yesterday =  get_workdoy_yesterday().strftime("%d %B %Y") 
 
 # Defining worksheets
 ws_yest = sh.worksheet(yesterday)
